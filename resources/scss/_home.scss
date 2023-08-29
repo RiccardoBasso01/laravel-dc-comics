@@ -1,0 +1,24 @@
+@use './utils/colors' as *; 
+
+
+main{
+    .carousel-item{
+       height: 600px;
+       img{
+           height: 100%;
+           width: 100%;
+           object-position: 50% 70%;
+           object-fit: cover;
+       }
+    }
+}
+
+.carousel{
+    h1{
+        font-weight: 700;
+        font-size: 50px;
+        font-family: $firaSans;
+    }
+
+    text-shadow: 1px 1px 5px black;
+}

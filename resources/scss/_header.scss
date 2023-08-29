@@ -1,0 +1,55 @@
+@use './utils/vars' as *; 
+@use './utils/colors' as *; 
+
+.navbar{
+    .navbar-nav{
+
+        @include font(700, black);
+    }
+
+    background-color: white;
+    padding: 0 !important;
+
+    .active{
+        @include font(500);
+    }
+}
+
+
+header li {
+    @include flex();
+    height: 60px;
+    margin-right: 20px;
+    position: relative;
+
+    &.active,
+    &:hover {
+        .nav-link{
+            color: $primary-color;
+        }
+    }
+
+    .nav-link{
+        color: black;
+        text-transform: uppercase
+    }
+}
+
+.logo {
+    @include flex;
+
+    img {
+        width: 40px;
+        margin-right: 40px;
+    }
+}
+
+
+header li.active::after,
+header li:hover::after {
+    content: '';
+    @include position(absolute, $bottom: 0, $left: 0);
+    width: 100%;
+    height: 3px;
+    background-color: $primary-color;
+}
