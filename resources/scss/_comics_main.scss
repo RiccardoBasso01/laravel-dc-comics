@@ -1,0 +1,28 @@
+@use './utils/vars' as *; 
+@use './utils/colors' as *; 
+
+.comics-title {
+    @include font($color: white);
+    background-color: $primary-color;
+    padding: 10px;
+    display: inline-block;
+    margin: 20px 0 50px 0;
+}
+
+
+.comics ul {
+    // @include grid_ul(2, 10px);
+}
+
+.comics a {
+    display: block;
+}
+
+.comic-subtitle {
+    @include font(500, $family: $firaCode, $color: grey, $letter-spacing: 3px);
+    margin: 5px 0;
+}
+
+.comic-title {
+    @include font($weight: 700, $color: black);
+}

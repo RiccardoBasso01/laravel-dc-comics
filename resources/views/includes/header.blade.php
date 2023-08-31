@@ -17,9 +17,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     @foreach ($links as $link)
-                        <li class="nav-item">
-                            <a class="nav-link  @if (Route::is($link)) active @endif "
-                                href="{{ route('home') }}">{{ $link }}</a>
+                        <li class="nav-item @if (Route::is($link)) active @endif ">
+                            <a class="nav-link "
+                                href="@if ($link === 'comics') {{ route('comics') }} @endif">{{ $link }}</a>
                         </li>
                     @endforeach
                 </ul>
