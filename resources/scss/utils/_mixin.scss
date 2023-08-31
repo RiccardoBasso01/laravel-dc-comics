@@ -7,12 +7,13 @@
     flex-direction: $direction;
 }
 
-@mixin font($weight: inherit, $color:  inherit, $family: $firaSans, $text-decoration: none, $letter-spacing: normal, $text-transorm: none ){
+@mixin font($weight: inherit, $color:  inherit, $family: $firaSans, $text-decoration: none, $letter-spacing: normal, $text-transform: none ){
     font-weight: $weight;
     color: $color;
     font-family: $family;
     text-decoration: $text-decoration;
     letter-spacing: $letter-spacing;
+    text-transform: $text-transform;
 }
 
 @mixin position($position, $top: auto, $bottom: auto, $left: auto, $right: auto){

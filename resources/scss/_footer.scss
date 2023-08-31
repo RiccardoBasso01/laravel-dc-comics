@@ -18,7 +18,7 @@ footer{
 
 // Link della Navbar
 .footer-link{
-    @include font(600, white, $firaSans, $text-transorm: uppercase);
+    @include font(600, white, $firaSans, $text-transform: uppercase);
     display: inline-block;
 }
 
