@@ -1,12 +1,33 @@
+@use './utils/colors' as *; 
+@use './utils/vars' as *; 
+
 footer{
-    background-color: grey;
+    background-color: black;
+   @include font(600, white, $firaSans);
+    padding: 30px;
+}
 
-    ul{
-        list-style-type: none;
-        padding: 0;
+.footer-logo{
+    img{
+        width: 75px
     }
 
-    a{
-        color: black;
-    }
+    margin-bottom: 16px
+}
+
+.footer-link{
+    @include font(600, white, $firaSans);
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.footer-link:not(:last-child)::after{
+    content: '|';
+    color: white;
+    margin: 0 14px;
+}
+
+.footer-link:hover{
+    color: $primary-color;
+    transition: all 0.3s;
 }
