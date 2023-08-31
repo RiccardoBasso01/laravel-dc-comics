@@ -6,14 +6,17 @@
 @section('main')
     <main>
         <div class="container-xl my-5">
+            {{-- Singolo Comic --}}
             <div class="comics">
                 <div class="row">
+                    {{-- Immagine (se presente) --}}
                     @if ($comic->thumb)
                         <div class="col-4">
                             <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" class="card-img-top">
                         </div>
                     @endif
 
+                    {{-- Descrizione --}}
                     <div class="col-{{ $comic->thumb ? '8' : '12' }}">
                         <h5 class="card-subtitle">{{ Str::of($comic->type)->upper() }}</h5>
                         <h2 class="card-title fw-bold text-black">{{ $comic->title }}</h2>
@@ -25,6 +28,7 @@
             </div>
         </div>
 
+        {{-- Dettagli del fumetto --}}
         <section id="comic-details">
             <div class="container-xl">
                 <div class="row">

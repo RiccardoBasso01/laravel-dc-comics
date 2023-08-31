@@ -1,0 +1,22 @@
+@use '../utils/mixin' as *; 
+@use '../utils/vars' as *; 
+
+//___________________ Pagina COMICS
+
+.comics-title {
+    @include font($color: white);
+    background-color: $primary-color;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 0 50px 0;
+}
+
+.card-title {
+    font-family: $firaSans;
+}
+
+.card-subtitle{
+    @include font(400, #666666, $firaCode, $letter-spacing:3px);
+    font-size: 14px;
+    margin: -2px 0 14px 0;
+}

@@ -1,24 +1,25 @@
-@use './utils/colors' as *; 
+@use './utils/vars' as *; 
 
+//___________________ Pagina HOME
 
-main{
-    .carousel-item{
-       height: 600px;
-       img{
-           height: 100%;
-           width: 100%;
-           object-position: 50% 70%;
-           object-fit: cover;
-       }
-    }
+// Carosello
+.carousel-item{
+   height: 600px;
+
+   img{
+       height: 100%;
+       width: 100%;
+       object-position: 50% 70%;
+       object-fit: cover;
+   }
 }
 
 .carousel{
+    text-shadow: 1px 1px 5px black;
+
     h1{
         font-weight: 700;
         font-size: 50px;
         font-family: $firaSans;
     }
-
-    text-shadow: 1px 1px 5px black;
 }

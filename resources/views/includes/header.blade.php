@@ -5,15 +5,18 @@
 <header class=" sticky-top">
     <nav class="navbar navbar-expand-md">
         <div class="container">
+            {{-- Logo --}}
             <a class="navbar-brand" href="{{ route('home') }}">
-                <!-- logo -->
                 <div class="logo"><img src="{{ asset('img/dc-logo.png') }}" alt="DC logo"></div>
             </a>
 
+            {{-- Hamburger-menu --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            {{-- Navbar --}}
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     @foreach ($links as $link)

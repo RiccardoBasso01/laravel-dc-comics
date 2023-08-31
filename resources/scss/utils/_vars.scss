@@ -1,24 +1,10 @@
-@use './colors' as *; 
+// ___ Fonts
+$firaSans: 'Fira Sans Condensed', sans-serif;
+$openSans: "Open Sans", sans-serif;
+$firaCode: 'Fira Code', monospace;
 
-@mixin flex($justify-content: center, $align-items: center, $direction: row){
-    display: flex;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    flex-direction: $direction;
-}
-
-@mixin font($weight: inherit, $color:  inherit, $family: $firaSans, $text-decoration: none, $letter-spacing: normal ){
-    font-weight: $weight;
-    color: $color;
-    font-family: $family;
-    text-decoration: $text-decoration;
-    letter-spacing: $letter-spacing;
-}
-
-@mixin position($position, $top: auto, $bottom: auto, $left: auto, $right: auto){
-    position: $position;
-    top: $top;
-    bottom: $bottom;
-    left: $left;
-    right: $right;
-}
+// ___ Colori
+$primary-color: #0c7ceb;
+$red:#bb243d;
+$grey:#444;
+$light-grey:#666;

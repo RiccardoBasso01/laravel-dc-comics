@@ -1,30 +1,14 @@
-@use './utils/vars' as *; 
-@use './utils/colors' as *; 
+@use '../utils/mixin' as *; 
+@use '../utils/vars' as *; 
 
-.comics-title {
-    @include font($color: white);
-    background-color: $primary-color;
-    padding: 10px;
-    display: inline-block;
-    margin: 20px 0 50px 0;
-}
+//___________________ Pagina Singolo COMIC
 
-
-.card-title {
-font-family: $firaSans;
-}
-.card-subtitle{
-    @include font(400, #666666, $firaCode, $letter-spacing:3px);
-    font-size: 14px;
-    margin: -2px 0 14px 0;
-}
-
+// Descrizione
 .card-button{
-    padding: 10px 60px;
-    border-radius: 50px;
+    @include font(600, black, $firaSans, $text-transorm: uppercase);
     border: 1px solid black;
-    text-transform: uppercase;
-    @include font(600, black, $firaSans);
+    border-radius: 50px;
+    padding: 10px 60px;
     background-color: white;
     transition: all 0.5s;
 }
@@ -39,6 +23,7 @@ font-family: $firaSans;
     @include font(500, #444, $firaSans);
 }
 
+// Dettagli del fumetto
 #comic-details{
     @include font(500, #444, $openSans);
     background-color: #ebebeb;
@@ -48,6 +33,7 @@ font-family: $firaSans;
         @include font(600, black, $firaSans);
         margin-bottom: 16px;
     }
+    
     div[class^="col-"]{
         margin-bottom: 16px;
     }

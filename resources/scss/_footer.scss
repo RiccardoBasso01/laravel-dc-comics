@@ -1,23 +1,24 @@
-@use './utils/colors' as *; 
+@use './utils/mixin' as *; 
 @use './utils/vars' as *; 
 
+// Footer
 footer{
+    @include font(600, white, $firaSans);
     background-color: black;
-   @include font(600, white, $firaSans);
     padding: 30px;
 }
 
+// Logo
 .footer-logo{
     img{
         width: 75px
     }
-
     margin-bottom: 16px
 }
 
+// Link della Navbar
 .footer-link{
-    @include font(600, white, $firaSans);
-    text-transform: uppercase;
+    @include font(600, white, $firaSans, $text-transorm: uppercase);
     display: inline-block;
 }
 

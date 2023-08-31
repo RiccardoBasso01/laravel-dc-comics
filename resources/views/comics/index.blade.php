@@ -10,17 +10,21 @@
     <main>
         <div class="comics-list">
             <div class="container-xl">
+                {{-- Titolo della pagina --}}
                 <div class="comics-title">
                     <h2 class="m-0">YOUR LIST OF COMICS & GRAPHIC NOVELS</h2>
                 </div>
 
+                {{-- Lista comics --}}
                 <div class="comics">
                     <div class="row row-cols-4 g-3">
                         @foreach ($comics as $comic)
                             <div class="col">
                                 <a href="{{ route('comics.show', $comic) }}">
                                     <div class="card text-center border-0">
+                                        {{-- Immagine (se presente) --}}
                                         <img src="{{ $comic->thumb ? $comic->thumb : $imgPath }}" alt="{{ $comic->title }}">
+                                        {{-- Titolo e sottotitolo --}}
                                         <div class="card-body">
                                             <h6 class="card-subtitle">{{ Str::of($comic->type)->upper() }}</h6>
                                             <h4 class="card-title fw-bold text-black">{{ $comic->title }}</h4>

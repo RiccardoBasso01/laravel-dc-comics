@@ -1,14 +1,17 @@
+// Bootstrap
 @use '~bootstrap/scss/bootstrap' as *;
 
-// utils
-@use './utils/colors' as *;
+// Utils
+@use './utils/mixin' as *;
 @use './utils/vars' as *;
 
-// includes
+// Includes
 @use './header' as *;
-@use './home' as *;
 @use './footer' as *;
-@use './comics_main' as *;
+@use './home' as *;
+// Comics
+@use './comics/index' as *;
+@use './comics/show' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
