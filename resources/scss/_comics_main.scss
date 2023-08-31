@@ -10,19 +10,11 @@
 }
 
 
-.comics ul {
-    // @include grid_ul(2, 10px);
+.card-title {
+font-family: $firaSans;
 }
-
-.comics a {
-    display: block;
-}
-
-.comic-subtitle {
-    @include font(500, $family: $firaCode, $color: grey, $letter-spacing: 3px);
-    margin: 5px 0;
-}
-
-.comic-title {
-    @include font($weight: 700, $color: black);
+.card-subtitle{
+    @include font(400, #666666, $firaCode, $letter-spacing:3px);
+    font-size: 14px;
+    margin: -2px 0 14px 0;
 }

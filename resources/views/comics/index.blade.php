@@ -2,11 +2,6 @@
 
 @section('title', 'COMICS')
 
-@php
-    // $imgNames = config('main_navbar');
-    // $comics = config('comics');
-@endphp
-
 @section('main')
     <main>
         <div class="comics-list">
@@ -16,19 +11,21 @@
                 </div>
 
                 <div class="comics">
-                    <ul>
-                        {{-- @foreach ($comics as $index => $comic) --}}
-                        <li>
-                            {{-- <a href="{{ url("/comic/$index") }}">
-                                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}"
-                                        title="{{ $comic['series'] }}">
-                                    <div class="comic-subtitle">{{ Str::of($comic['type'])->upper() }} </div>
-                                    <div class="comic-title">
-                                        {{ Str::of($comic['series'])->upper() }}</div>
-                                </a> --}}
-                        </li>
-                        {{-- @endforeach --}}
-                    </ul>
+                    <div class="row row-cols-4 g-3">
+                        @foreach ($comics as $comic)
+                            <div class="col">
+                                <a href="#">
+                                    <div class="card text-center border-0">
+                                        <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
+                                        <div class="card-body">
+                                            <h6 class="card-subtitle">{{ Str::of($comic->type)->upper() }}</h6>
+                                            <h4 class="card-title fw-bold text-black">{{ $comic->title }}</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
