@@ -150,7 +150,7 @@ return $comics = [
     ],
     [
         'title' => 'KNIGHT TERRORS: ACTION COMICS #2 ',
-        'description' => 'KNIGHT TERRORS: ACTION COMICS #2 ',
+        'description' => '<p>Reality bites! With her perfect nightmare world slowly showing its cracks, Power Girl searches for answers, hoping to find a villain to punch and a way out. Little does she know a threat from her past is here to control her future. Plus, in the Nightmare Realm, a hideously transformed Cyborg Superman is consuming the Super-Family one by one! Who will be the “final El”? And can the powerless Super-Twins find a way to fight back before Cyborg Superman claims them all?!</p> ',
         'thumb' => 'https://static.dc.com/2023-08/KT_AC_Cv2_00211_DIGITAL.jpg?w=640',
         'price' => '4.99',
         "series" => 'KNIGHT TERRORS 2023',
@@ -183,6 +183,23 @@ return $comics = [
         ],
         "artists" => [
             'Scott Godlewski',
+        ],
+    ],
+    [
+        'title' => 'THE RIDDLER: YEAR ONE #6',
+        'description' => '<p>The time has come. Edward Nashton’s long, painful psychological journey and downward spiral have finally brought him to the point where he is ready to take direct action against the corrupt of Gotham. Embittered and abandoned and believing the world is aligned against him, he’s reached the time to lash out. His extensive research and clandestine operations have left him with a deeper knowledge of the city’s web of criminality than anyone in Gotham. And now he knows exactly which targets to strike and when.</p><p>As Edward finally dons the mask of the Riddler, the series ends right before the start of his first murderous attack, shown in the opening scene of Matt Reeves’s film <em>The Batman</em>. Actor Paul Dano brought this character to life onscreen, and now he completes Edward’s arc with this groundbreaking prequel. Together with renowned European artist Stevan Subic, Dano has crafted a disturbing and emotional tale, filling out the backstory of one of the most unique and terrifying villains faced by any version of the Dark Knight.</p>',
+        'thumb' => '',
+        'price' => '4.99',
+        "series" => 'THE RIDDLER: YEAR ONE 2022',
+        "sale_date" => "Tuesday, August 22nd, 2023",
+        "page_count" => 32,
+        "rated" => "Mature",
+        'type' => 'comic book',
+        "writers" => [
+            'Paul Dano'
+        ],
+        "artists" => [
+            'Stevan Subic',
         ],
     ],
 ];

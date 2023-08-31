@@ -19,8 +19,8 @@ class ComicSeeder extends Seeder
 
             $new_comic = new Comic();
 
-            $writers = implode(',', $comic['writers']);
-            $artists = implode(',', $comic['artists']);
+            $writers = implode(', ', $comic['writers']);
+            $artists = implode(', ', $comic['artists']);
 
             $new_comic->title = $comic['title'];
             $new_comic->series = $comic['series'];

@@ -2,6 +2,10 @@
 
 @section('title', 'COMICS')
 
+@php
+    $imgPath = 'https://static.dc.com/2022-11/DC_placeholder_comic-active_573b3c133ef580.76442500.jpg?w=192';
+@endphp
+
 @section('main')
     <main>
         <div class="comics-list">
@@ -14,9 +18,9 @@
                     <div class="row row-cols-4 g-3">
                         @foreach ($comics as $comic)
                             <div class="col">
-                                <a href="#">
+                                <a href="{{ route('comics.show', $comic) }}">
                                     <div class="card text-center border-0">
-                                        <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
+                                        <img src="{{ $comic->thumb ? $comic->thumb : $imgPath }}" alt="{{ $comic->title }}">
                                         <div class="card-body">
                                             <h6 class="card-subtitle">{{ Str::of($comic->type)->upper() }}</h6>
                                             <h4 class="card-title fw-bold text-black">{{ $comic->title }}</h4>
