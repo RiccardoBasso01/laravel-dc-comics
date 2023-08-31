@@ -17,9 +17,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     @foreach ($links as $link)
-                        <li class="nav-item @if (Route::is($link)) active @endif ">
-                            <a class="nav-link "
-                                href="@if ($link === 'comics') {{ route('comics') }} @endif">{{ $link }}</a>
+                        <li class="nav-item @if (request()->routeIs($link . '*')) active @endif ">
+                            <a class="nav-link" {{-- Funziona solo il link ai comics perchè al momento non esiste nessuna rotta per gli altri link della navbar --}}
+                                href="@if ($link === 'comics') {{ route('comics.index') }} @endif">{{ $link }}</a>
                         </li>
                     @endforeach
                 </ul>
