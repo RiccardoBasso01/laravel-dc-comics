@@ -44,8 +44,8 @@
                     <div class="col-6">
                         <h4>SPECS</h4>
                         <div class="row row-cols-2">
-                            <div class="col-3">Series:</div>
-                            <div class="col-9">{{ $comic->series }}</div>
+                            <div class="col-3 ">Series:</div>
+                            <div class="col-9 series">{{ $comic->series }}</div>
                             <div class="col-3">U.S. Price:</div>
                             <div class="col-9">{{ $comic->price }}</div>
                             @if ($comic->sale_date)
