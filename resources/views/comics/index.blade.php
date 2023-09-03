@@ -8,12 +8,19 @@
 
 @section('main')
     <main>
-        <div class="comics-list">
+        <section id="comics-list">
             <div class="container-xl">
-                {{-- Titolo della pagina --}}
-                <div class="comics-title">
-                    <h2 class="m-0">YOUR LIST OF COMICS & GRAPHIC NOVELS</h2>
-                </div>
+                {{-- Header --}}
+                <header class="d-flex justify-content-between align-items-center">
+                    {{-- Titolo della pagina --}}
+                    <div class="comics-title">
+                        <h2 class="m-0">YOUR LIST OF COMICS & GRAPHIC NOVELS</h2>
+                    </div>
+
+                    <div>
+                        <a href="{{ route('comics.create') }}" class="add"><i class="fa-solid fa-plus fa-2x"></i></a>
+                    </div>
+                </header>
 
                 {{-- Lista comics --}}
                 <div class="comics">
@@ -36,6 +43,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 @endsection

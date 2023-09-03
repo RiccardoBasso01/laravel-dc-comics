@@ -1,0 +1,27 @@
+@use '../utils/mixin' as *; 
+@use '../utils/vars' as *; 
+
+//___________________ Pagina COMICS CREATE
+#create{
+    header{
+        margin: 20px 0 50px 0;
+    }
+
+    .form-label{
+        @include font(600, black, $firaSans, $text-transform:uppercase);
+        margin-bottom: 16px;
+    }
+
+    .btn-form{
+        @include font(600, black, $firaSans, $text-transform:uppercase);
+        padding: 15px 60px;
+        border: 1px solid black;
+        border-radius: 50px;
+    }
+
+    .btn-form:hover{
+        color: white;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
