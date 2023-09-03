@@ -44,8 +44,10 @@
                     <div class="col-6">
                         <h4>SPECS</h4>
                         <div class="row row-cols-2">
-                            <div class="col-3 ">Series:</div>
-                            <div class="col-9 series">{{ $comic->series }}</div>
+                            @if ($comic->series)
+                                <div class="col-3 ">Series:</div>
+                                <div class="col-9 series">{{ $comic->series }}</div>
+                            @endif
                             <div class="col-3">U.S. Price:</div>
                             <div class="col-9">{{ $comic->price }}</div>
                             @if ($comic->sale_date)
@@ -59,6 +61,11 @@
                             <div class="col-3">Rated:</div>
                             <div class="col-9">{{ $comic->rated }}</div>
                         </div>
+                    </div>
+                    <div class="col-12">
+                        <h4>settings <i class="fa-solid fa-gear"></i></h4>
+                        <a href="{{ route('comics.edit', $comic) }}" class="btn btn-update me-3">edit</a>
+                        <a href="{{ route('comics.destroy', $comic) }}" class="btn btn-delete">delete</a>
                     </div>
                 </div>
             </div>
