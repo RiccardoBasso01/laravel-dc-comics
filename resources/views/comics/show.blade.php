@@ -65,7 +65,11 @@
                     <div class="col-12">
                         <h4>settings <i class="fa-solid fa-gear"></i></h4>
                         <a href="{{ route('comics.edit', $comic) }}" class="btn btn-update me-3">edit</a>
-                        <a href="{{ route('comics.destroy', $comic) }}" class="btn btn-delete">delete</a>
+                        <form class="d-inline-block" action="{{ route('comics.destroy', $comic) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-delete">delete</button>
+                        </form>
                     </div>
                 </div>
             </div>
